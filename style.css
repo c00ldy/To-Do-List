@@ -1,16 +1,27 @@
-*{
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
+
+
+* {
     margin: 0;
     padding: 0;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 300;
 }
 
-body{
+body {
     background-color: white;
     display: flex;
     justify-content: center;
-
+    background-color: transparent;
+    background-image: radial-gradient(#000000 1px, #e5e5f7 1px);
+    background-size: 30px 30px;
+    width: 100%;
+    height: 100%;
 }
 
-.mainsection{
+.mainsection {
+    background-color: white;
     margin-top: 7%;
     border: 2px solid black;
     height: 65vh;
@@ -18,3 +29,80 @@ body{
     box-shadow: 0px 5px 28px black;
 
 }
+
+.heading {
+    margin-top: 5%;
+    text-align: center;
+    font-weight: 600;
+    font-size: 19px;
+}
+
+.input-group {
+    margin-top: 5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.input {
+    padding: 0 0.3rem;
+    height: 32px;
+    color: #fff;
+    font-size: 15px;
+    border: 1px solid #5e4dcd;
+    border-radius: 6px 0 0 6px;
+    background-color: transparent;
+}
+
+.button--submit {
+    height: 34px;
+    padding: 0 0.5rem;
+    border: none;
+    border-radius: 0 6px 6px 0;
+    background-color: #5e4dcd;
+    color: #fff;
+    font-size: 15px;
+    cursor: pointer;
+    transition: background-color .3s ease-in-out;
+}
+
+.button--submit:hover {
+    background-color: #5e5dcd;
+}
+
+.input:focus,
+.input:focus-visible {
+    border-color: #3898EC;
+    outline: none;
+}
+
+.txt {
+    margin: 1% 12%;
+    font-size: 0.7rem
+}
+
+.btn{
+    display: flex;
+    justify-content: center;
+    grid-auto-rows: auto;
+    margin-top: 3%;
+    gap: 33px;
+}
+
+.btnstyl{
+    padding: 3% 11px;
+    color: white;
+    background-color: #5e4dcd;
+    border: none;
+    border-radius: 5px;
+}
+
+.btnstyl:hover{
+    padding: 3% 11px;
+    color: white;
+    background-color: #413497;
+    border: none;
+    border-radius: 5px;
+}
+
+
