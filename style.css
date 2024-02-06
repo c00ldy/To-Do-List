@@ -22,11 +22,11 @@ body {
 
 .mainsection {
     background-color: white;
-    margin-top: 7%;
-    border: 2px solid black;
-    height: 65vh;
+    margin-top: 12%;
+    border: 2px solid rgba(0, 0, 0, 0.619);
+    height: 41vh;
     width: 50vh;
-    box-shadow: 0px 5px 28px black;
+    box-shadow: 0px 5px 28px rgba(0, 0, 0, 0.397);
 
 }
 
@@ -47,7 +47,7 @@ body {
 .input {
     padding: 0 0.3rem;
     height: 32px;
-    color: #fff;
+    color: #000000;
     font-size: 15px;
     border: 1px solid #5e4dcd;
     border-radius: 6px 0 0 6px;
@@ -106,3 +106,7 @@ body {
 }
 
 
+
+.list{
+    margin: 6%  13% ;
+}
