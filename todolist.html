@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="todoApp">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="todolist.css">
+</head>
+
+<body>
+    <!-- main div -->
+    <div class="container" ng-controller="Todocontroller">
+
+        <!-- div with heading and button  -->
+        <div class="header">
+            <h2>To-Do List 📚</h2>
+
+            <form ng-submit="addnewtask()">
+                <input class="ipt" type="text" ng-model="addTask" placeholder="Add New Task">
+                <button class="bn" type="submit" class="addbtn">Add Task</button>
+            </form>
+        </div>
+
+        <!-- div with results and list with delete button  -->
+        <div class="box">
+            <div class="task">
+                <p>Total Task: {{ totalTask() }}</p>
+                <p>Remaining Task: {{ remainingTask() }}</p>
+            </div>
+            <div>
+                <ul>
+                    <li class="tasks" ng-repeat="task in todo track by $index">
+                        <div class="task-container">
+                            <input type="checkbox" class="checkbox" id="task{{$index}}" ng-model="task.completed"
+                                ng-change="updateRemaining()">
+                            <label for="task{{$index}}" ng-class="{completed: task.completed}">{{ task.text }}</label>
+                            <button class="delete-button" ng-click="deleteTask($index)">X</button>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- div with clear and clear all button  -->
+        <div class="clear">
+            <button class="clear-button" ng-click="clearCompleted()">ClearCompleted</button>
+            <button class="clear-button" ng-click="clearAll()">ClearAll</button>
+        </div>
+
+    </div>
+    <!-- main div over -->
+    <script src="angular.min.js"></script>
+    <script src="todolist.js"></script>
+</body>
+
+</html>
